@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<!-- Configuring Our java classes information -->
+	<!-- id: reference variable of instance , class: FQCN -->
+	
+	 <bean id="emp1" class="com.naresh.Employee"></bean>
+	<bean id="naresh"  class="com.naresh.Company"></bean> 
+	
+	
+	<bean id="emp" class="com.naresh.Employee">
+		<property name="empId" value="12345"></property>
+		<property name="empName" value="Naveen"></property>
+	</bean>
+	
+	<bean id="emp2" class="com.naresh.Employee">
+		<property name="empId" value="8899"></property>
+	</bean>
+	
+	<bean 
+	     id="student1" class="com.naresh.Student">
+	         <property name="studentId" value="100"></property>
+	  	     <property name="studentName" value="Naveen"></property>
+	  	  	 <property name="avgOfMarks" value="98.99"></property>
+	  	  	 <property name="isSelected" value="true"></property>	  
+	  	  	 <property name="gender" value="M"></property>
+	  	  
+	</bean>
+	
+	
+	
+
+</beans>

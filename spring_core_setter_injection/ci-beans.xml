@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+     
+	<bean id="emp1"
+		class="com.naresh.training.spring.core.ci.Employye">
+		<constructor-arg index="1" value="Naveen"></constructor-arg>
+		<constructor-arg index="0" value="1"></constructor-arg>
+
+	</bean>
+
+	<bean id="emp2" 	class="com.naresh.training.spring.core.ci.Employye">
+		<constructor-arg index="1" value="Balu..."></constructor-arg>
+		<constructor-arg index="0" value="2"></constructor-arg>
+		<constructor-arg index="2" value="50000.00"></constructor-arg>
+
+	</bean>
+		
+	<bean id="emp3" 	class="com.naresh.training.spring.core.ci.Employye">
+		<property name="empId" value="3"></property>
+		<property name="empName" value="Anusha..."></property>
+	</bean>
+
+    <bean id="order1" class="com.naresh.training.spring.core.ci.Order">
+         <constructor-arg value="1234"></constructor-arg>
+         <constructor-arg>
+              
+              <list>
+                <value>Iphone13</value>
+                <value>Iphone13</value>
+                <value>Hp-Laptop</value>
+                <value>Mouse</value>              
+              </list>
+              
+         </constructor-arg>
+         <constructor-arg value="300000.00"></constructor-arg>
+        
+    </bean>
+
+    <bean id="orderPrices"
+		class="com.naresh.training.spring.core.ci.Order">
+
+		<constructor-arg>
+			<set>
+				<value>100.00</value>
+				<value>200.00</value>
+				<value>300.00</value>
+				<value>400.00</value>
+				<value>100.00</value>
+				<value>300.00</value>
+			</set>
+
+		</constructor-arg>
+	</bean>
+	
+	<!-- CI with Objects -->
+	<bean id="area" class="com.naresh.training.spring.core.ci.AreaInfo">
+		<property name="streetName" value="Shanthi Nagar"></property>
+		<property name="flatName" value="Aditya Ramani Enclave"></property>
+	
+	</bean>
+
+	<bean id="address1"
+		class="com.naresh.training.spring.core.ci.CustomerAddress">
+
+		<property name="city" value="HYD"></property>
+		<property name="pincode" value="500072"></property>
+		<property name="area" value="kaukatpally"></property>
+		<property name="areaInfo" ref="area"></property>
+	</bean>
+
+	<bean id="customer1"
+		class="com.naresh.training.spring.core.ci.Customer">
+		
+
+		<constructor-arg value="Naveen123"></constructor-arg>
+		<constructor-arg value="91779631"></constructor-arg>
+		<constructor-arg ref="address1"></constructor-arg>
+
+	</bean>
+	
+</beans>

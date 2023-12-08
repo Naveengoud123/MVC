@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+
+
+	<bean id="address2"
+		class="com.naresh.training.spring.core.Address">
+		<property name="city" value="Banglore"></property>
+		<property name="country" value="India"></property>
+		<property name="pincode" value="400066"></property>
+	</bean>
+
+
+	<!-- Student s = new Student(); -->
+	<bean id="student1"
+		class="com.naresh.training.spring.core.Student">
+		<property name="studentName" value="Dilip Singh"></property>
+		<property name="studentId" value="100"></property>
+		<property name="address" ref="address2"></property>
+	</bean>
+
+	<bean id="student2"
+		class="com.naresh.training.spring.core.Student">
+		<property name="studentName" value="Naresh"></property>
+		<property name="studentId" value="101"></property>
+		<property name="address" ref="address2"></property>
+	</bean>
+	<bean id="student3"
+		class="com.naresh.training.spring.core.Student">
+		<property name="studentName" value="Anusha Singh"></property>
+		<property name="studentId" value="103"></property>
+		<property name="address" ref="address2"></property>
+	</bean>
+
+	<bean id="student4"
+		class="com.naresh.training.spring.core.Student">
+		<property name="studentName" value="Rohan"></property>
+		<property name="studentId" value="104"></property>
+		<property name="address" ref="address2"></property>
+	</bean>
+
+	<bean id="emp1" class="com.naresh.training.spring.core.Employee">
+		<property name="empName" value="ABC XYZ"></property>
+		<property name="empId" value="900"></property>
+		<property name="address" ref="address2"></property>
+	</bean>
+
+	<!-- chennai : 200 bng: 500 Hyd: 400 -->
+
+</beans>

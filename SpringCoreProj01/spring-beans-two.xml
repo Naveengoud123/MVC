@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+<bean id ="order1" class="com.naresh.setter.injection.Order" >
+
+  <!-- private int OrderId; private String amount; private List<String> items;  -->
+ <property name="orderId" value="12345"></property>
+  <property name="amount" value="3000.00"></property>
+  <property name="items">
+    
+        <list>
+        
+           <value>Biryani</value>
+            <value>Roti</value>
+            <value>Sweet</value>
+            <value>IceCream</value>
+            <value>Curd</value>
+            <value>Biryani</value>
+            
+        </list>
+    
+    </property>
+    <property name="prices">
+       <set>
+         <value>200.00</value>
+         <value>500</value>
+         <value>300</value>
+         <value>250</value>
+       
+         <value>200</value>
+       
+         <value>500</value>
+       
+       </set>
+    </property>
+    
+    <property name="itemPrices">
+      <map>
+           <entry key="Biryani" value="200.00"></entry>
+            <entry key="IceCream" value="100.00"></entry>
+            <entry key="Sweet" value="50.00"></entry>
+            <entry key="Biryani" value="500.00"></entry>
+            <entry key="Roti" value="50.00"></entry>
+      
+      </map>
+    </property>
+ 
+  </bean>
+
+</beans>

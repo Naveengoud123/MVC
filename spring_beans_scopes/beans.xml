@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+      
+      
+   <beans>
+      
+             <!-- Default Scope id singleton -->
+	         <!-- <bean id="home" class="com.dilip.Address"> -->
+	         
+        <bean id="home" class="com.naveen.Address" scope="singleton">
+           <property name="city" value="Hyderabad"></property>
+           <property name="pincode" value="500072"></property>
+        </bean>
+        
+        <bean id="office" class="com.naveen.Address" scope="singleton">
+           <property name="city" value="Bangolore"></property>
+           <property name="pincode" value="400072"></property>
+        </bean>
+        
+        <bean id="product1" class="com.naveen.Product" scope="prototype">
+           <property name="productId" value="A121"></property>
+           <property name="price" value="5000.00"></property>
+        </bean>
+        
+        <bean id="product2" class="com.naveen.Product" scope="prototype">
+           <property name="productId" value="B122"></property>
+           <property name="price" value="7000.00"></property>
+        </bean>
+        
+      
+      
+    </beans>
